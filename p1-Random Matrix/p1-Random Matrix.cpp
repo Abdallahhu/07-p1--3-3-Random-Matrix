@@ -27,7 +27,7 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols)
     {
         for (int j = 0; j < Cols; j++)
         {
-            cout << setw(5) << arr[i][j];
+            cout << setw(3) << arr[i][j] << "\t";
         }
         cout << endl;
     }
@@ -36,9 +36,12 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols)
 int main()
 {
     srand((unsigned)time(NULL));
+    
     int arr[3][3];
     int Rows = 3, Cols = 3;
+    
     FillMatrixWithRandomNumbers(arr, Rows, Cols);
+    
     PrintMatrix(arr, Rows, Cols);
     
     return 0;
